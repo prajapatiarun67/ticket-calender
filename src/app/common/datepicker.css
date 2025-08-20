@@ -1,0 +1,60 @@
+.dark-calendar {
+  background-color: #ffffff;
+  border: 1px solid #fffbfb;
+  color: white;
+  border-radius: 1rem;
+  padding: 8px;
+}
+
+.dark-calendar .react-datepicker__day {
+    width: 40px;        /* default ~2rem, increase here */
+  height: 40px;
+  line-height: 40px;  /* centers the number vertically */
+  font-size: 16px;    /* bigger font */
+  border-radius: 8px; /* rounded corners */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-calendar .react-datepicker__day:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.dark-calendar .react-datepicker__day--selected {
+  background-color: #2563eb;
+  color: white;
+}
+
+.dark-calendar .react-datepicker__header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #333;
+  color: #000000
+}
+
+.dark-calendar .react-datepicker__current-month,
+.dark-calendar .react-datepicker__day-name {
+  color: #000000;
+  font-weight: bold;
+  font-size:medium;
+  width:40px;
+}
+
+.react-datepicker__day-name {
+  width:40px;
+}
+
+.react-datepicker__current-month {
+  width: auto !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #000000 !important; /* Change to your color */
+}
+
+.react-datepicker__day--today {
+  background-color: #2563eb !important; /* Tailwind blue-600 */
+  color: white !important;
+}
+
