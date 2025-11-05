@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import DarkVeil from "@/components/DarkVeil/DarkVeil";
+import Navbar from "@/components/navbar/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="fixed inset-0 -z-10 bg-gradient-to-br from-purple-900 via-black to-black opacity-90">
+          <DarkVeil speed={0.5} warpAmount={3} />
+        </div>
+        <Navbar />
+
         {children}
       </body>
     </html>

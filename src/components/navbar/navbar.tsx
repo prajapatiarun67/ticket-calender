@@ -9,14 +9,14 @@ export default function Navbar() {
         <div className="bg-purple-600 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">⚛</div>
         <span className="text-white font-semibold">React Bits</span>
       </div>
-     <div className="flex space-x-6 text-white">
-      <Link href="/" className="hover:text-purple-300">
-        Home
-      </Link>
-      <Link href="pnr-status" className="hover:text-purple-300">
-        PNR Status
-      </Link>
-      </div> 
+      <div className="flex space-x-6 text-white">
+        <Link href="/" className="hover:text-purple-300">
+          Home
+        </Link>
+        <Link href="pnr-status" className="hover:text-purple-300">
+          PNR Status
+        </Link>
+      </div>
     </nav>
   );
 }
