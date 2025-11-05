@@ -1,8 +1,10 @@
+import PnrStatus from "./components/pnr-status/PnrStatus";
+import Home from "./page";
+import Link from "next/link";
+
 const routes = {
-  home: '/',
-  about: '/about',
-  blog: (id = ':id') => `/blog/${id}`,
-  contact: '/contact',
+  Home: '/',
+  PnrStatus: 'pnr-status',
 };
 
 export default routes;

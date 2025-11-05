@@ -4,6 +4,7 @@
   color: white;
   border-radius: 1rem;
   padding: 8px;
+  width: auto;
 }
 
 .dark-calendar .react-datepicker__day {
