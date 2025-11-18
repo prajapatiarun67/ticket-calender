@@ -74,8 +74,7 @@ export default function PnrStatus() {
           value={pnr}
           onChange={(e) => setPnr(e.target.value)}
           placeholder="Enter PNR Number"
-          className="w-full px-4 py-3 rounded-full text-black text-lg focus:outline-none focus:ring-4 focus:ring-purple-500"
-
+          className="w-full px-4 py-3 rounded-full text-white text-lg focus:outline-none focus:ring-4 focus:ring-purple-500"
         />
         <button onClick={fetchPNRStatus} disabled={loading || !pnr.trim()}
           className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all"
