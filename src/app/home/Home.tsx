@@ -28,10 +28,7 @@ export default function Home() {
             </div>
 
             {/* Date Picker Box */}
-            <div className="bg-black/50 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl border border-white/10 flex flex-col items-center space-y-4 w-full max-w-md">
-                {/*  <h2 className="text-xl font-bold text-white mb-2">
-                    Enter the Date of Journey
-                </h2> */}
+            <div className="backdrop-blur-md rounded-2xl p-2 md:p-2 shadow-xl flex flex-col items-center space-y-4 px-6 md:px-0">
                 <DatePickerComponent />
             </div>
 
