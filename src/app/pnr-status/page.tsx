@@ -1,6 +1,6 @@
 "use client";
-
 import { useState } from "react";
+import TrainTicketDetails from "./pnr-status-template";
 
 export default function PnrStatus() {
   const [pnr, setPnr] = useState("");
@@ -66,49 +66,42 @@ export default function PnrStatus() {
 
         {data && data.success && data.data && (
           <div style={{ marginTop: '20px', width: '100%' }}>
-            <h2>Train Ticket Details</h2>
-            <div style={{ width: '100%', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0', fontWeight: 'bold' }}>
-                <div style={{ flex: 1 }}>PNR Number</div>
-                <div style={{ flex: 2 }}>{data.data.pnrNumber}</div>
+            {/* <div className="max-w-lg mx-auto p-8 rounded-lg bg-gradient-to-b from-[#2a1047] to-[#111111] shadow-xl">
+              <h3 className="mb-8 text-2xl font-bold text-white text-center">Train Ticket Details</h3>
+
+              <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">PNR Number :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.pnrNumber}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Train Number :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.trainNumber}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Train Name :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.trainName}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Date of Journey :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.dateOfJourney}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Source Station :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.sourceStation}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Destination Station :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.destinationStation}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Journey Class :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.journeyClass}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Chart Status :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.chartStatus}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Booking Fare :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.bookingFare}</span>
+
+                <span className="font-semibold text-[#7FFFD4] text-right pr-2">Arrival Date :</span>
+                <span className="text-[#39FF14] font-medium">{data.data.arrivalDate}</span>
               </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Train Number</div>
-                <div style={{ flex: 2 }}>{data.data.trainNumber}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Train Name</div>
-                <div style={{ flex: 2 }}>{data.data.trainName}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Date of Journey</div>
-                <div style={{ flex: 2 }}>{data.data.dateOfJourney}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Source Station</div>
-                <div style={{ flex: 2 }}>{data.data.sourceStation}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Destination Station</div>
-                <div style={{ flex: 2 }}>{data.data.destinationStation}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Journey Class</div>
-                <div style={{ flex: 2 }}>{data.data.journeyClass}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Chart Status</div>
-                <div style={{ flex: 2 }}>{data.data.chartStatus}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Booking Fare</div>
-                <div style={{ flex: 2 }}>{data.data.bookingFare}</div>
-              </div>
-              <div style={{ display: 'flex', borderBottom: '1px solid #ccc', padding: '8px 0' }}>
-                <div style={{ flex: 1 }}>Arrival Date</div>
-                <div style={{ flex: 2 }}>{data.data.arrivalDate}</div>
-              </div>
-            </div>
+            </div> */}
+            <TrainTicketDetails ticketData={data.data} />
 
 
             <h2 style={{ marginTop: '24px' }}>Passenger Details</h2>
