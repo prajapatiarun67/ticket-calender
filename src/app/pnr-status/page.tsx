@@ -3,9 +3,16 @@ import { useState } from "react";
 import TrainTicketDetails from "./pnr-status-template";
 
 export default function PnrStatus() {
-  const [pnr, setPnr] = useState("");
 
-  const [data, setData] = useState(null);
+  interface ApiResponse {
+    success: boolean;
+    message?: string;
+    data?: any;
+  }
+
+  const [pnr, setPnr] = useState("");
+  //const [data, setData] = useState(null);
+  const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -104,31 +111,7 @@ export default function PnrStatus() {
             <TrainTicketDetails ticketData={data.data} />
 
 
-            <h2 style={{ marginTop: '24px' }}>Passenger Details</h2>
-            <table border="1" style={{ margin: '0 auto', width: '100%', borderCollapse: 'collapse' }}>
-              <thead>
-                <tr>
-                  <th>S. No.</th>
-                  <th>Current Status</th>
-                  <th>Booking Status</th>
-                  <th>Current Berth No.</th>
-                  <th>Booking Berth No.</th>
-                  <th>Quota</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.data.passengerList.map((p) => (
-                  <tr key={p.passengerSerialNumber}>
-                    <td>{p.passengerSerialNumber}</td>
-                    <td>{p.currentStatusDetails}</td>
-                    <td>{p.bookingStatusDetails}</td>
-                    <td>{p.currentBerthNo}</td>
-                    <td>{p.bookingBerthNo}</td>
-                    <td>{p.passengerQuota}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+
           </div>
         )}
 
